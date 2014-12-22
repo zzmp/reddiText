@@ -1,6 +1,6 @@
 {
   "name": "redditext",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Filter the images out of reddit to focus on stories.",
   "scripts": {
     "test": "echo 'Tests not yet implemented :('",
