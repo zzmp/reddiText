@@ -1,0 +1,14 @@
+general:
+  artifacts:
+    - 'dist.zip'
+test:
+  override:
+deployment:
+  master:
+    branch: master
+    commands:
+      - git log --pretty=format:%s -1 | grep -qv '(bump)' # Do not loop on bumps
+      - git config --global user.email 'zmp@umich.edu'
+      - git config --global user.name 'Zach Pomerantz'
+      - npm i -g json
+      - npm run ci
